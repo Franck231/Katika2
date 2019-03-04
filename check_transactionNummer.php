@@ -58,8 +58,8 @@ function showlikeReset() {
 </h1>
 </section>
 
-  <label id="lbl">Geben Sie die Transaktionsid ein:</label> <input id = "theTransaction" type="text" ><br>
-  <button id="btnVer" onclick="myFunction()">Verify</button >
+  <label id="lbl">Entrer le numéro de transaction:</label> <input id = "theTransaction" type="text" ><br>
+  <button id="btnVer" onclick="myFunction()">Verifier</button >
   
   <br>
   <div id="txtHint"></div>

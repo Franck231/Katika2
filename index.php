@@ -68,7 +68,7 @@ function showlikeReset() {
 					document.getElementById("btnToNTrans").style.display = "inline";
 					document.getElementById("btnNomPrenom").style.display = "inline";
 					document.getElementById("btnVerAbmelden").style.display = "inline";
-					document.getElementById("hinweis").innerHTML = "Wählen Sie bitte eine Suchoption aus";
+					document.getElementById("hinweis").innerHTML = "Choisissez svp une option";
 					
 				}else {
 					
@@ -86,7 +86,7 @@ function showlikeReset() {
 
 function myFunctionabmeldung() {
 	
-					document.getElementById("lbl").style.display = "inline";
+							document.getElementById("lbl").style.display = "inline";
 					document.getElementById("lbl2").style.display = "inline";
 					document.getElementById("username").style.display = "inline";
 					document.getElementById("pword").style.display = "inline";
@@ -94,7 +94,7 @@ function myFunctionabmeldung() {
 					document.getElementById("pword").value = "";
 					document.getElementById("btnVer").style.display = "inline";
 					
-	    document.getElementById("hinweis").innerHTML = "Melden Sie sich bitte an";
+	    document.getElementById("hinweis").innerHTML = "Veuillez vous enregistrer";
 		document.getElementById("meldung").style.display = "none";
 		document.getElementById("btnVerAgain").style.display = "none";
 		document.getElementById("btnToDate").style.display = "none";
@@ -121,6 +121,8 @@ function myFunctionabmeldung() {
 
 </script>
 
+
+
 <body>
 <div id ="Enveloppe">
 <section id ="Entete">
@@ -131,23 +133,24 @@ function myFunctionabmeldung() {
 
 <h2>
 <section id ="Donnees">
-<p id="hinweis">Melden Sie sich bitte an</p>
+<p id="hinweis">Veuillez vous enregistrer</p>
 
     <label id="lbl">Email:</label> <input type="text" id = "username"><br>
     <label id="lbl2">Password:</label> <input  type="password" id = "pword"><br>
 
-   <button id="btnVer" onclick="myFunction()"> Login </button >
+   <button id="btnVer" onclick="myFunction()"> Anmelden </button >
    
    <h4 id="meldung"   style="color: red"> Login-Daten nicht korrekt</h4>
    
    <button id="btnVerAgain" onclick="myFunction()"> Melden Sie sich bitte nochmal an</button >
    
-   <button id="btnToDate" onclick="window.location.href='chckWithDate.php'">Überprüfen mit Datum</button >
-   <button id="btnToNTrans" onclick="window.location.href='check_transactionNummer.php'">Überprüfen mit TransaktionsID </button >
-   <button id="btnNomPrenom" onclick="window.location.href='check_name_vorname.php'">Überprüfen mit Namen und Vornamen</button >
+   <button id="btnToDate" onclick="window.location.href='chckWithDate.php'"> Verifier avec la Date</button >
+   <button id="btnToNTrans" onclick="window.location.href='check_transactionNummer.php'"> Verifier avec la Transactions</button >
+   <button id="btnNomPrenom" onclick="window.location.href='check_name_vorname.php'"> Verifier avec Nom et Prenom</button >
    
-   <button id="btnVerAbmelden" onclick="myFunctionabmeldung()">Logout</button >
+   <button id="btnVerAbmelden" onclick="myFunctionabmeldung()">Abmelden</button >
   
+
   </section>
  </h2>
  
@@ -155,6 +158,7 @@ function myFunctionabmeldung() {
 Email 
 <p> katika@yahoo.com</p>
 </h5>
+
 </div>
 </body>
 

@@ -1,10 +1,14 @@
 <?php // phpinfo();
+
 /** Include PHPExcel */
 require_once  'PHPExcel.php';
 // Create new PHPExcel object
 
 function getClientByIdTransactionAndDate($tmpfkundename,$tmpfVorname,$tmpfnametf)
 {
+
+
+
  $test = false;
  $error = "";
  $tmpfname = $tmpfnametf;
@@ -13,13 +17,15 @@ function getClientByIdTransactionAndDate($tmpfkundename,$tmpfVorname,$tmpfnametf
  $worksheet = $excelObj->getSheet(0);
  $lastRow = $worksheet->getHighestRow();
  
-     $a = "";	 
+     $a = "";
+	 
 	 $b = "no";
 	 $c = "";
  
 	 $a = $a . "<h2>Infos: </h2>";
 	 
-	 $a = $a . "<table>";	 
+	 $a = $a . "<table>";
+	 
 	 	    $a = $a . "<tr>
 				<th>Clientid</th>
 				<th>Prenom</th>
@@ -35,6 +41,7 @@ function getClientByIdTransactionAndDate($tmpfkundename,$tmpfVorname,$tmpfnametf
 					
 					if (strcmp($worksheet->getCell('B'.$row)->getValue(), $tmpfVorname) == 0) {
 						
+
 						 $a = $a . "<tr><td>";
 						 $a = $a . $worksheet->getCell('A'.$row)->getValue();
 						 $a = $a . "</td>";
@@ -53,30 +60,50 @@ function getClientByIdTransactionAndDate($tmpfkundename,$tmpfVorname,$tmpfnametf
 						 $a = $a . "<td>";
 						 $a = $a . $worksheet->getCell('F'.$row)->getFormattedValue();
 						 $a = $a . "</td><tr>";
+						 
 						 $b = "yes";
-					}					   
-				}			
+
+					}
+					
+    
+				}
+			
+				
+			
+
 			}
+		
 		$a = $a . "</table>"; 
-		$a = $a . "<button id=\"btnPru\"  onclick=\"showlikeReset()\"> Neue Prüfung </button>";			
-		if (strcmp($b, "no") == 0){		
+		$a = $a . "<button id=\"btnPru\"  onclick=\"showlikeReset()\"> Neue Prüfung </button>";
+		
+		
+		if (strcmp($b, "no") == 0){
+			
 			 $c = $c . "Keine Transaction mit diesen Vornamen und Namen vorhanden";
 			 $c = $c . "<br>";
-			 $c = $c . "<button id=\"btnPru\"  onclick=\"showlikeReset()\"> Neue Prüfung </button>";	 
-			 echo $c;	 
+			 $c = $c . "<button id=\"btnPru\"  onclick=\"showlikeReset()\"> Neue Prüfung </button>";
+			 
+			 echo $c;
+			 
 		} else {
 			echo $a;
 		}
-		unlink($tmpfname);	 
+		
+		unlink($tmpfname);
+	 
 }
+
 		$tmpfname = "merdatiel.xlsx";
 	    file_put_contents($tmpfname,  
           file_get_contents('Tableauventes.xlsx')
 		  // file_get_contents_curl('www.hotmail.com')
-        );		
+        );	
+		
 		$tmpfkundename = $_GET['q'];
 		$tmpfVorname = $_GET['r'];
+
 		getClientByIdTransactionAndDate($tmpfkundename,$tmpfVorname,$tmpfname);
+
 ?>
 
 

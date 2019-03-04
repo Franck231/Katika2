@@ -59,7 +59,7 @@ function getClientByIdTransactionAndDate($date, $tmpfnametf)
 		
 		echo "</table>"; 
 		
-		echo "<button id=\"btnPru\"  onclick=\"showlikeReset()\"> Neue Pruefung </button>";
+		echo "<button id=\"btnPru\"  onclick=\"showlikeReset()\"> Neue Prüfung </button>";
 		
 		unlink($tmpfname);
 	 
@@ -69,7 +69,6 @@ function getClientByIdTransactionAndDate($date, $tmpfnametf)
 	    file_put_contents($tmpfname,  
           file_get_contents('Tableauventes.xlsx')
 		  // file_get_contents_curl('www.hotmail.com')
-
         );	
 		
 		$tmpfdateValue = $_GET['q'];

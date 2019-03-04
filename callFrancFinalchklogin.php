@@ -6,18 +6,22 @@ require_once  'PHPExcel.php';
 
 function getLoginStatus($userName,$pw)
 {
+ 
      $UserNameOk = "mekou";
 	 $PwOk = "tintin@toto";
 	 
 	 $res = "0";
+
 				
 		if (strcmp($UserNameOk, $userName) == 0) {
 					
 					if (strcmp($PwOk,$pw) == 0) {
 						
 						$res = "1";
+
 					}
 		}
+		
 		echo $res;
 }
 

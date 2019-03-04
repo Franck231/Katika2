@@ -58,9 +58,9 @@ function showlikeReset() {
 </h1>
 </section>
 
-  <label id="lbl">Geben Sie bitte das Datum ein:</label> <input id = "theDate" type="text" ><br>
+  <label id="lbl">Entrez la Date:</label> <input id = "theDate" type="text" ><br>
   
-  <button id="btnVer" onclick="myFunction()"> Verify</button >
+  <button id="btnVer" onclick="myFunction()"> Verifier </button >
   
   <br>
   <div id="txtHint"></div>

@@ -85,11 +85,11 @@ function getClientByIdTransactionAndDate($tmpftransaction, $tmpfnametf)
 		$tmpfname = "merdatiel.xlsx";
 	    file_put_contents($tmpfname,  
           file_get_contents('Tableauventes.xlsx')
-		 // file_get_contents_curl('www.hotmail.com')
+		  // file_get_contents_curl('www.hotmail.com')
         );	
 		
 		$tmpftransaction = $_GET['q'];
-		getClientByIdTransaction($tmpftransaction,$tmpfname);
+		getClientByIdTransactionAndDate($tmpftransaction,$tmpfname);
 
 ?>
 

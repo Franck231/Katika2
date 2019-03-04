@@ -75,7 +75,7 @@ function showlikeReset() {
 
   <label id="lbl">Geben Sie bitte den Namen an:</label> <input id = "theName" type="text" ><br>
   <label id="lbl2">Geben Sie bitte den Vornamen an:</label> <input id = "theVorname" type="text" ><br>
-  <button id="btnVer" onclick="myFunction()">Verify</button >
+  <button id="btnVer" onclick="myFunction()">Überprüfen</button >
   
   <br>
   <div id="txtHint"></div>
